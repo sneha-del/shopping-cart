@@ -20,7 +20,7 @@ const Items = ({ id, title, img, amount, price, color }) => {
           <i className="fas fa-plus add" onClick={() => inc(id)}></i>
         </div>
         <div className="price">
-          <h3>{price}</h3>
+          <h3>{price}$</h3>
         </div>
       </div>
       <hr />

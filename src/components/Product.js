@@ -5,7 +5,7 @@ export const Product = [
     title: "Woo Ninja",
     color: "Grey",
     stock: "In Stock",
-    price: "250$",
+    price: "250",
     amount: 1,
   },
   {
@@ -14,7 +14,7 @@ export const Product = [
     title: "Woo Logo",
     color: "Brown",
     stock: "In Stock",
-    price: "150$",
+    price: "150",
     amount: 1,
   },
   {
@@ -23,7 +23,7 @@ export const Product = [
     title: "Patient Ninja",
     color: "White",
     stock: "In Stock",
-    price: "350$",
+    price: "350",
     amount: 1,
   },
   {
@@ -32,7 +32,7 @@ export const Product = [
     title: "Ninja Silhoutte",
     color: "Pink",
     stock: "In Stock",
-    price: "200$",
+    price: "200",
     amount: 1,
   },
   {
@@ -41,7 +41,7 @@ export const Product = [
     title: "Woo Ninja",
     color: "Black",
     stock: "In Stock",
-    price: "290$",
+    price: "290",
     amount: 1,
   },
   {
@@ -50,7 +50,7 @@ export const Product = [
     title: "Simple Ninja",
     color: "Blue",
     stock: "In Stock",
-    price: "100$",
+    price: "100",
     amount: 1,
   },
   {
@@ -59,7 +59,7 @@ export const Product = [
     title: " Ninja",
     color: "Red",
     stock: "In Stock",
-    price: "20$",
+    price: "20",
     amount: 1,
   },
   {
@@ -68,7 +68,7 @@ export const Product = [
     title: "Duo Ninja",
     color: "Pink",
     stock: "In Stock",
-    price: "850$",
+    price: "850",
     amount: 1,
   },
   {
@@ -77,7 +77,7 @@ export const Product = [
     title: "Woon Ninja",
     color: "Orange",
     stock: "In Stock",
-    price: "1250$",
+    price: "1250",
     amount: 1,
   },
 ];

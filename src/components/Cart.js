@@ -3,7 +3,7 @@ import Items from "./Items";
 import { Product } from "./Product";
 import { CartContext } from "./ProductPage";
 const Cart = () => {
-  const { item } = useContext(CartContext);
+  const { item, totalAmount, checkout } = useContext(CartContext);
   // const [item, setItem] = useState(Product);
   return (
     <>
@@ -23,9 +23,9 @@ const Cart = () => {
         </div>
         <div className="card-total">
           <h3>
-            Cart Total:<span>250$</span>
+            Cart Total:<span>{totalAmount}$</span>
           </h3>
-          <button>checkout</button>
+          <button onClick={checkout}>checkout</button>
         </div>
       </section>
     </>
