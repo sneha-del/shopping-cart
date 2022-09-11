@@ -2,8 +2,15 @@ import React, { createContext, useEffect, useReducer } from "react";
 import Cart from "./Cart";
 import { Product } from "./Product";
 import { reducer } from "./reducer";
+//import Checkout from "./Checkout";
+
 export const CartContext = createContext();
-const initialState = { item: Product, totalAmount: 0, totalItem: 0 };
+const initialState = {
+  item: Product,
+
+  totalAmount: 0,
+  totalItem: 0,
+};
 const ProductPage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const inc = (id) => {
@@ -20,20 +27,20 @@ const ProductPage = () => {
   };
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
-    // console.log("Awesome");
   }, [state.item]);
-  const checkout = (id) => {
-    return dispatch({
-      typeof: "CHECKOUT",
-      payload: id,
-    });
-  };
+  // const checkout = (id) => {
+  //   return dispatch({
+  //     typeof: "CHECKOUT",
+  //     payload: id,
+  //   });
+  // };
   //const [item, setItem] = useState(Product);
 
   return (
     <>
-      <CartContext.Provider value={{ ...state, inc, dec, checkout }}>
+      <CartContext.Provider value={{ ...state, inc, dec }}>
         <Cart />
+        {/* <CheckOutItem /> */}
       </CartContext.Provider>
     </>
   );

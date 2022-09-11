@@ -5,13 +5,13 @@ const Items = ({ id, title, img, amount, price, color }) => {
   const { inc, dec } = useContext(CartContext);
   return (
     <>
-      {" "}
       <div className="items-info">
         <div className="product-img">
           <img src={img} alt="img" />
         </div>
         <div className="title">
           <h2>{title}</h2>
+
           <p>{color}</p>
         </div>
         <div className="add-minus-quantity">

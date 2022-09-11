@@ -171,6 +171,7 @@ header {
   );
   box-shadow: rgba(0, 0, 0, 0.08) 0rem 0.4rem 1.2rem;
   border-radius: 2rem;
+ 
   margin: auto;
   margin: auto;
   display: grid;
@@ -186,6 +187,7 @@ header {
   width: 90%;
   height: 56rem;
   overflow-y: scroll;
+  
 }
 
 .items-info {
@@ -419,4 +421,12 @@ header {
   .card-total button {
     margin-bottom: 3rem;
   }
+}
+.search-bar{
+  border-radius: 20px;
+  height: 40px;
+  
+}
+.search{
+  padding-bottom: 20px;
 }
