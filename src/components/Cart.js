@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { item, totalAmount, checkout } = useContext(CartContext);
   // const [item, setItem] = useState(Product);
-
+  const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
   const handleClick = (e) => {
@@ -22,14 +22,29 @@ const Cart = () => {
         </div>
       </div>
       <div className="search">
-        <input type="text" className="search-bar" placeholder="Search" />
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search"
+          onChange={(event) => setQuery(event.target.value)}
+        />
       </div>
       <section className="main-cart-section">
         <div className="cart-items">
           <div className="cart-items-container">
-            {item.map((curItem) => {
-              return <Items key={curItem.id} {...curItem} />;
-            })}
+            {item
+              .filter((curItem) => {
+                if (query === "") {
+                  return curItem;
+                } else if (
+                  curItem.color.toLowerCase().includes(query.toLowerCase())
+                ) {
+                  return curItem;
+                }
+              })
+              .map((curItem, index) => {
+                return <Items key={curItem.id} {...curItem} />;
+              })}
           </div>
         </div>
         <div className="card-total">
